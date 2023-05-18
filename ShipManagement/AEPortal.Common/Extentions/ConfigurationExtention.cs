@@ -79,8 +79,8 @@ namespace AEPortal.Common.Extentions
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = currentAssembly.GetName().Version?.ToString(),
-                    Title = "NovaSolution API Portal",
-                    Description = "An ASP.NET Core Web API for managing NovaSolution Portal",
+                    Title = "AEPortal",
+                    Description = "An ASP.NET Core Web API for managing Ships",
                 });
                 c.AddSecurityDefinition(jwtSecurityScheme.Reference.Id, jwtSecurityScheme);
 

@@ -1,4 +1,8 @@
-﻿using AutoMapper;
+﻿using AEPortal.Bussiness.ResponseModel;
+using AEPortal.Bussiness.ViewModel;
+using AEPortal.Common.Models;
+using AEPortal.Data.Entities;
+using AutoMapper;
 
 namespace AEPortal.Bussiness.Mapping
 {
@@ -8,6 +12,11 @@ namespace AEPortal.Bussiness.Mapping
         {
             SourceMemberNamingConvention = LowerUnderscoreNamingConvention.Instance;
             DestinationMemberNamingConvention = PascalCaseNamingConvention.Instance;
+
+            CreateMap<Ship, ShipResponseDto>();
+            CreateMap<ShipCreateViewModel, Ship>();
+            CreateMap<ShipUpdateViewModel, Ship>();
+            CreateMap<PageList<Ship>, PageList<ShipResponseDto>>();
         }
     }
 

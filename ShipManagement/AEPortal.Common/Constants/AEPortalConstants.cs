@@ -1,4 +1,4 @@
-﻿namespace AEPortal.Data.Constants
+﻿namespace AEPortal.Common.Constants
 {
     public class AEPortalConstants
     {

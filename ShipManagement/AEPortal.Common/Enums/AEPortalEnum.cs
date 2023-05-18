@@ -1,4 +1,4 @@
-﻿namespace AEPortal.Data.Enums
+﻿namespace AEPortal.Common.Enums
 {
     public enum DeleteFlag
     {

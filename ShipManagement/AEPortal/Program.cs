@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 using System.Reflection;
 
-var rootApi = "api/v1/";
+var rootApi = "api/";
 
 var builder = WebApplication.CreateBuilder(args);
 
