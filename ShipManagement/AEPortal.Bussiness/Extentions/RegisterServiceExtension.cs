@@ -12,10 +12,12 @@ namespace AEPortal.Bussiness.Extentions
         public static void DJService(this IServiceCollection service)
         {
             service.AddTransient<IShipService, ShipService>();
+            service.AddTransient<IPortService, PortService>();
         }
         public static void DJRepository(this IServiceCollection service)
         {
             service.AddScoped<IGenericRepository<Ship>, GenericRepository<Ship, Context>>();
+            service.AddScoped<IGenericRepository<Port>, GenericRepository<Port, Context>>();
             service.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }

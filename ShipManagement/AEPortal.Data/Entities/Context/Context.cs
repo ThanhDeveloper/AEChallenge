@@ -15,6 +15,7 @@ namespace AEPortal.Data.Entities.Context
         }
 
         public DbSet<Ship> Ships { get; set; }
+        public DbSet<Port> Ports { get; set; }
 
     }
 }

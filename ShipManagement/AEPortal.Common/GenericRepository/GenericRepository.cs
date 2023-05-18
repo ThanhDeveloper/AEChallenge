@@ -18,7 +18,7 @@ namespace AEPortal.Common.GenericRepository
         IQueryable<T> Seach();
         Task<bool> Any(Expression<Func<T, bool>> expression);
         IQueryable<T> Where(Expression<Func<T, bool>> expression);
-        ValueTask<T> GetById(Guid id);
+        ValueTask<T> GetByIdAsync(Guid id);
         IQueryable<T> Include(Func<IQueryable<T>, IIncludableQueryable<T, object>> include);
         void AddRange(IEnumerable<T> data);
     }
@@ -91,7 +91,7 @@ namespace AEPortal.Common.GenericRepository
             return _dbSet.Where(expression);
         }
 
-        public ValueTask<TEntity> GetById(Guid id)
+        public ValueTask<TEntity> GetByIdAsync(Guid id)
         {
             return _dbSet.FindAsync(id);
         }

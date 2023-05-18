@@ -5,7 +5,6 @@ using AEPortal.Common.Models;
 using AEPortal.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
-using System.Net;
 
 namespace AEPortal.Controllers;
 
@@ -40,7 +39,7 @@ public class ShipsController : BaseController
 
     [SwaggerOperation(Summary = "Update the velocity of a ship by providing the ship's unique identifier")]
     [HttpPut("{id}/velocity")]
-    [SwaggerResponse(statusCode:204)]
+    [SwaggerResponse(statusCode: 204)]
     public async Task<IActionResult> Update([FromBody] ShipUpdateViewModel shipUpdateViewModel, Guid id)
     {
         await _shipService.Update(shipUpdateViewModel, id);

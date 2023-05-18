@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace AEPortal.Bussiness.ResponseModel
+﻿namespace AEPortal.Bussiness.ResponseModel
 {
     public class ShipResponseDto
     {
