@@ -14,4 +14,8 @@
 	  <ProjectReference Include="..\AEPortal.Common\AEPortal.Common.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="DatabaseSeeder\" />
+	</ItemGroup>
+
 </Project>
