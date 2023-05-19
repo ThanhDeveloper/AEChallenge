@@ -45,4 +45,13 @@ public class ShipsController : BaseController
         await _shipService.Update(shipUpdateViewModel, id);
         return NoContent();
     }
+
+    [SwaggerOperation(Summary = "Get closest port by providing the ship's unique identifier")]
+    [Produces(typeof(CustomResponseDto<ShipClosestPortResponse>))]
+    [HttpGet("{id}/closest-port")]
+    public async Task<IActionResult> GetClosestPort(Guid id)
+    {
+        var result = await _shipService.GetClosestPort(id);
+        return Ok(CustomResponseDto<ShipClosestPortResponse>.SuccessResponse(StatusCodes.Status200OK, result));
+    }
 }

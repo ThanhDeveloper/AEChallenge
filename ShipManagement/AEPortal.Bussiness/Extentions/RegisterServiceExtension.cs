@@ -12,7 +12,6 @@ namespace AEPortal.Bussiness.Extentions
         public static void DJService(this IServiceCollection service)
         {
             service.AddTransient<IShipService, ShipService>();
-            service.AddTransient<IPortService, PortService>();
         }
         public static void DJRepository(this IServiceCollection service)
         {

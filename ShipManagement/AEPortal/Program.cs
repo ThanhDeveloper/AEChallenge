@@ -35,6 +35,16 @@ builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
+// Get the context from the service provider
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<Context>();
+
+    context.SeedRandomPorts();
+    context.SeedRandomShips();
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
