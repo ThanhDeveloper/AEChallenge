@@ -9,6 +9,17 @@
 - **AEPortal.Business**: Configures packages for the application, logging, constants, enums, global exception handling, base response configuration, and base search model.
 - **AEPortal.Data**: Configures entities and the project's context. Data migration is performed.
 
+## Install the database by:
+# Use code first:
+- Download visual studio
+- Configure your sql server database at DefaultConnection in the appsetting.json file of the AEPortal project
+- Right click on AEPortal project => set as startup project
+- Open Tools => Nuget package manager => Package manager console
+- Select default project is AEPortal.Data
+- Run the command update-database
+# Use sql scripts
+- Open the sql script in the DatabaseSeeder folder of the AEPortal.Data project. Run the script to create database, table and sample data in sqlserver. Configure your sql server database at DefaultConnection in the appsetting.json file of the AEPortal project and launch the project
+
 **Note**:
 The distance between the ship and each port is calculated using a CalculateDistance function , which takes the geolocation (longitude and latitude) of both points as input and returns the distance between them. Once the closest port is found, the estimated time to that port is calculated by dividing the distance by the velocity of the ship. Finally, a ShipClosestPortResponse object is created containing the details of the closest port and the estimated arrival time and returned. Here are the calculated distances (in kilometers) between each ship and each port:
 Example data:
@@ -32,9 +43,6 @@ Based on sample data, when you run the api the data will return the nearest port
   - Port 5: 2448.62 km
 
 As you can see, Port 5 is indeed the closest port to both Ship 1 and Ship 2.
-
-
-
 
 ## API Endpoints
 The solution includes the following API endpoints. I have attached the model description of the response in each swagger api:
