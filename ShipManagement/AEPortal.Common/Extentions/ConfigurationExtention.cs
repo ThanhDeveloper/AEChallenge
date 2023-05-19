@@ -1,5 +1,4 @@
-﻿using AEPortal.Common.Configurations;
-using AEPortal.Common.Extentions;
+﻿using AEPortal.Common.Extentions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,7 +16,6 @@ namespace AEPortal.Common.Extentions
     {
         public static void AddConfigBase(this IServiceCollection services, IConfiguration Configuration, string rootApi, Assembly currentAssembly)
         {
-            services.Configure<AppConfig>(Configuration.GetSection(nameof(AppConfig)));
             services.AddLogging();
             // Add services to the container.
 
