@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+      - "7054:7054"
+    depends_on:
+      - db
+    environment:
+      - ConnectionStrings__DefaultConnection=server=db;database=master;uid=sa;pwd=Admin1234@;Pooling=false;Connection Timeout=30;
+    networks:
+      - ae_network
+    container_name: ae_web_api 
+    command: sh -c "sleep 10 && dotnet AEPortal.dll"  # Wait for 60 seconds before starting the API
+    restart: on-failure  # Restart the container if it fails
+  db:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    environment:
+      SA_PASSWORD: "Admin1234@"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - ./AEPortal.Data/DatabaseSeeder/script.sql:/docker-entrypoint-initdb.d/script.sql
+    command:
+      - /bin/bash
+      - -c
+      - |
+        /opt/mssql/bin/sqlservr &
+        sleep 10
+        /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Admin1234@' -d master -i /docker-entrypoint-initdb.d/script.sql
+        wait
+    networks:
+      - ae_network
+    container_name: ae_db
+
+networks:
+  ae_network:
