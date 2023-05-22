@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEPortal", "AEPortal\AEPortal.csproj", "{4653BD93-956A-495C-A30B-680E89A5E5C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AEPortal", "AEPortal\AEPortal.csproj", "{4653BD93-956A-495C-A30B-680E89A5E5C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEPortal.Common", "AEPortal.Common\AEPortal.Common.csproj", "{1357CEAE-3DAA-44B3-99FD-FE75608F1637}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AEPortal.Common", "AEPortal.Common\AEPortal.Common.csproj", "{1357CEAE-3DAA-44B3-99FD-FE75608F1637}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEPortal.Bussiness", "AEPortal.Bussiness\AEPortal.Bussiness.csproj", "{78E07876-5D7D-4CFE-9087-65864AA98B73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AEPortal.Bussiness", "AEPortal.Bussiness\AEPortal.Bussiness.csproj", "{78E07876-5D7D-4CFE-9087-65864AA98B73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEPortal.Data", "AEPortal.Data\AEPortal.Data.csproj", "{0A17610D-304C-4E3C-8B22-5566EE3B2665}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AEPortal.Data", "AEPortal.Data\AEPortal.Data.csproj", "{0A17610D-304C-4E3C-8B22-5566EE3B2665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEPortal.UnitTesting", "AEPortal.UnitTesting\AEPortal.UnitTesting.csproj", "{637324B8-8B57-41D1-AD61-DF13222834A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0A17610D-304C-4E3C-8B22-5566EE3B2665}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A17610D-304C-4E3C-8B22-5566EE3B2665}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A17610D-304C-4E3C-8B22-5566EE3B2665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{637324B8-8B57-41D1-AD61-DF13222834A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{637324B8-8B57-41D1-AD61-DF13222834A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{637324B8-8B57-41D1-AD61-DF13222834A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{637324B8-8B57-41D1-AD61-DF13222834A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
