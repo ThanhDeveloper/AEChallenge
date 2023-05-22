@@ -39,6 +39,7 @@ namespace AEPortal.UnitTesting
             mockShipRepository.Verify(repo => repo.Add(It.IsAny<Ship>()), Times.Once);
         }
 
+        //The test method asserts that the calculated distance to the closest port is equal to the expected value and that the closest port is equal to the expected port.
         [Test]
         public void CalculateDistance_ValidInput_ReturnsCorrectDistance()
         {
