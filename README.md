@@ -65,4 +65,7 @@ Run the following commands in the ShipManagement folder containing the docker-co
 Now the web api will listen on port 7054. Try accessing an api at
 ``` http://localhost:7054/api/ships ```
 
+![image](https://github.com/ThanhDeveloper/AEChallenge/assets/48196420/d0e71894-2bbb-4265-b417-cb56b84c3348)
+
 **Note**: Please install docker and docker-compose before running the above commands
+
