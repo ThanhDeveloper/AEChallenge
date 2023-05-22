@@ -69,3 +69,8 @@ Now the web api will listen on port 7054. Try accessing an api at
 
 **Note**: Please install docker and docker-compose before running the above commands
 
+## Unit testing
+- Right click on AEPortal.UnitTesting project => set as startup project
+- Open Test => Run All Tests
+
+![image](https://github.com/ThanhDeveloper/AEChallenge/assets/48196420/37d37d7f-f3ce-4cbb-99d4-c40529e4b46d)
