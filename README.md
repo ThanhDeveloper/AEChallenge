@@ -60,3 +60,9 @@ The solution includes the following API endpoints. I have attached the model des
 ![image](https://github.com/ThanhDeveloper/AEChallenge/assets/48196420/58c8edd9-b6f3-4257-80ac-308257cf2084)
 
 ## Docker support
+Run the following commands in the ShipManagement folder containing the docker-compose.yml file:
+```docker-compose up -d```
+Now the web api will listen on port 7054. Try accessing an api at
+``` http://localhost:7054/api/ships ```
+
+**Note**: Please install docker and docker-compose before running the above commands
