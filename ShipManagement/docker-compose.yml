@@ -5,9 +5,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     ports:
-      - "80:80"
-      - "443:443"
-      - "7054:7054"
+      - "7054:80"
     depends_on:
       - db
     environment:
@@ -15,7 +13,7 @@ services:
     networks:
       - ae_network
     container_name: ae_web_api 
-    command: sh -c "sleep 10 && dotnet AEPortal.dll"  # Wait for 60 seconds before starting the API
+    command: sh -c "sleep 15 && dotnet AEPortal.dll"  # Wait for 15 seconds before starting the API
     restart: on-failure  # Restart the container if it fails
   db:
     image: "mcr.microsoft.com/mssql/server:2019-latest"
@@ -29,7 +27,6 @@ services:
       - -c
       - |
         /opt/mssql/bin/sqlservr &
-        sleep 10
         /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Admin1234@' -d master -i /docker-entrypoint-initdb.d/script.sql
         wait
     networks:
